@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="en" dir="ltr"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+    .sidebar {
+    font-family: "Merriweather Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 180px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000; /* Bootstrap dark background equivalent */
+    padding: 1rem;
+  }
+  .nav-link {
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color:#252729; /* Darker shade for hover effect */
+  color: #fff; /* Change text color to white on hover */
+}
+.nav-link.active-success {
+  background-color: #1DB954; /* Spotify green for active link */
+  color: #fff; /* White text for active link */
+  border-radius: 5px; /* Optional: rounded corners for active link */
+}
+
+  .main-content {
+    margin-left: 280px;  /* Same as the sidebar's width */
+    padding: 1rem;
+  }
+  .head1{
+   color: #0b7831;
+
+  }
+  .footer_text{
+    color: aliceblue;
+  }
+  .text-body-emphasis{
+    color: rgb(0, 0, 0);
+  }
+  #head2{
+    color: seashell;
+  }
+  .footer{
+  width: 100%;
+  color: #2e2424;
+}
+.foot-text{
+  color: #fff;
+
+}
+
+#foot-text{
+  color: #fff;
+}
+  
+</style>
+    </head>
+<body style="background-image: linear-gradient(rgb(16, 13, 13),rgb(57, 43, 43));; color: antiquewhite;">
+    <div class="d-flex flex-column flex-shrink-0 p-3 text-bg" style="width: 280px; height: 100vh; position: fixed; top: 0; left: 0; background-color: rgb(20, 18, 18);">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="26" fill="currentColor" class="bi bi-spotify text-success" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+          </svg> <use xlink:href=""></use>
+          <span class="fs-4 m-1 p-3 text-success">Spotify</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto "  >
+          <li class="nav-item">
+            <a href="/home.html" class="nav-link text-success" aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="/home"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+              </svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="/artist.html" class="nav-link text-success">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book-fill" viewBox="0 0 16 16">
+                <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+              </svg>
+              Artist
+            </a>
+          </li>
+          <li>
+            <a href="/your_lib.html" class="nav-link text-success">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-heart" viewBox="0 0 16 16">
+                <path d="m8 6.236-.894-1.789c-.222-.443-.607-1.08-1.152-1.595C5.418 2.345 4.776 2 4 2 2.324 2 1 3.326 1 4.92c0 1.211.554 2.066 1.868 3.37.337.334.721.695 1.146 1.093C5.122 10.423 6.5 11.717 8 13.447c1.5-1.73 2.878-3.024 3.986-4.064.425-.398.81-.76 1.146-1.093C14.446 6.986 15 6.131 15 4.92 15 3.326 13.676 2 12 2c-.777 0-1.418.345-1.954.852-.545.515-.93 1.152-1.152 1.595zm.392 8.292a.513.513 0 0 1-.784 0c-1.601-1.902-3.05-3.262-4.243-4.381C1.3 8.208 0 6.989 0 4.92 0 2.755 1.79 1 4 1c1.6 0 2.719 1.05 3.404 2.008.26.365.458.716.596.992a7.6 7.6 0 0 1 .596-.992C9.281 2.049 10.4 1 12 1c2.21 0 4 1.755 4 3.92 0 2.069-1.3 3.288-3.365 5.227-1.193 1.12-2.642 2.48-4.243 4.38z"/>
+              </svg>
+           
+               Your Library
+            </a>
+          </li>
+          <li>
+            <a href="/premium.html" class="nav-link active-success ">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tags" viewBox="0 0 16 16">
+                <path d="M3 2v4.586l7 7L14.586 9l-7-7zM2 2a1 1 0 0 1 1-1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 2 6.586z"/>
+                <path d="M5.5 5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 1a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3M1 7.086a1 1 0 0 0 .293.707L8.75 15.25l-.043.043a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 0 7.586V3a1 1 0 0 1 1-1z"/>
+              </svg>
+              Premium
+            </a>
+          </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Mariyam</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+<div class="main-content">
+ <div class="container py-3">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-spotify head1 text-success" viewBox="0 0 16 16">
+                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.669 11.538a.5.5 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686m.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858m.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288"/>
+              </svg>
+          <span class="fs-4 head1 text-success">Spotify Premium</span>
+        </a>
+  
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Features</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Enterprise</a>
+          <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#">Support</a>
+          <a class="py-2 link-body-emphasis text-decoration-none" href="#">Pricing</a>
+        </nav>
+      </div>
+  
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-success" id="head2"> Package </h1>
+        <p class="fs-5 text-body-light"><h2 class="text-success">Experience music like never before.</h2>
+          Get unlimited access to your favorite tracks, curated playlists, and exclusive content with the Spotify Premium Monthly plan. No ads, offline listening, and the freedom to skip any track. It's the perfect plan for those who want the ultimate Spotify experience.</p>
+          <p class="fs-5 text-body-light"><h2  class="text-success">Your favorite music, all year long.</h2>
+            Save more with Spotify Premium’s Yearly Plan. Enjoy all the perks of the Monthly Plan, but with a huge discount when you commit for the entire year. Perfect for music lovers who want uninterrupted listening for the long haul.</p>
+            <p class="fs-5 text-body-light"><h2  class="text-success">Get a taste of the Premium experience – for free!</h2>
+              Want to try Spotify Premium before committing? With our Free Premium Trial, you can enjoy everything from ad-free music to offline downloads, for a limited time! It’s the perfect way to see what you’re missing.</p>
+      </div>
+    </header>
+    <main>
+      <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col-4 my-2">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3 text-bg-success  border-success">
+            <h4 class="my-0 fw-normal">Free (Trail plan)</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Offline Downloads</li>
+              <li>Ad-Free Listening</li>
+              <li>Unlimited Skips</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-success">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+        <div class="col-4 my-2">
+          <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3 text-bg-success  border-success">
+              <h4 class="my-0 fw-normal">Monthly</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Ad-Free Listening </li>
+                <li>Offline Downloads</li>
+                <li>Unlimited Skips</li>
+                <li>Access to Exclusive Content</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-4 my-2">
+          <div class="card mb-4 rounded-3 shadow-sm border-success">
+            <div class="card-header py-3 text-bg-success border-success">
+              <h4 class="my-0 fw-normal">Yearly</h4>
+            </div>
+            <div class="card-body">
+              <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+              <ul class="list-unstyled mt-3 mb-4">
+                <li>Ad-Free Listening</li>
+                <li>Exclusive Access to New Music</li>
+                <li>Offline Downloads</li>
+                <li>Unlimited Skips</li>
+              </ul>
+              <button type="button" class="w-100 btn btn-lg btn-success">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    
+    </main>
+  
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+      <div class="row "id="footer_text">
+        <div class="col-12 col-md">
+          
+          <small class="d-block mb-3 text-body-secondary">© 2017–2024</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+            <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+  <div class="container" id="foot-text">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3" id="navbar1">
+        <li class="nav-item mx-3">Home</a></li>
+        <li class="nav-item mx-3">Features</a></li>
+        <li class="nav-item mx-3">Pricing</a></li>
+        <li class="nav-item mx-3">FAQs</a></li>
+        <li class="nav-item mx-3">About</a></li>
+      </ul>
+      <p class="text-center text-body-light">© 2024 Company, Inc</p>
+    </footer>
+  </div>
+ </div>
+</div> 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="java.js"></script>
+</body>
+</html>
+
