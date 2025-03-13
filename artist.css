@@ -1,0 +1,202 @@
+:root {
+  --spotify-dark: #121212;
+  --spotify-green: #1db954;
+  --text-light: #fff;
+  --card-bg: #221d1d;
+  --sidebar-bg: #000000;
+}
+body{
+  background-color:var(--spotify-dark);
+  color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+.sidebar {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  width: 150px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  z-index: 1; /* Lower z-index than search bar */
+  background-color: var(--sidebar-bg);
+}
+.nav-link {
+  transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color:#252729; /* Darker shade for hover effect */
+  color: #fff; /* Change text color to white on hover */
+}
+.nav-link.active-success {
+  background-color: #1DB954; /* Spotify green for active link */
+  color: #fff; /* White text for active link */
+  border-radius: 5px; /* Optional: rounded corners for active link */
+}
+
+.symbol_colour{
+  color: var(--spotify-green);
+}
+.search-bar {
+  position: fixed;
+  top: 10px;   
+  right: 20px; 
+  z-index: 2;  /* Higher z-index to stay above sidebar */
+  background-color: #121212;
+  border-radius: 5px;
+   display: flex;  /* Align button and input horizontally */
+  align-items: center;  /* Center-align items vertically */
+  padding: 2px;
+
+}
+.search-bar button {
+  border: none;
+  background-color: transparent;
+  color: #1db954; /* Spotify green for icon */
+}
+
+.search-bar input {
+
+  background-color: #f8f9fa; /* Lighter input field color */
+  border: 1px solid #ccc;  /* Subtle border */
+  color: #333;  /* Dark text for good contrast */
+  padding: 5px 10px;
+  font-size: 14px;
+}
+.main-content {
+  margin-left: 280px;  /* Same as sidebar width */
+  padding: 1.5rem; /* Increased padding */
+}
+.hero {
+  background: linear-gradient(135deg, #5fdf4e, #000000); /* A smooth gradient from blue to teal */
+  color: white;
+  padding: 2rem 2rem; /* Adjusted padding for more space */
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow with more spread */
+}
+
+.hero h1 {
+  font-size: 2.5rem; /* Slightly smaller for a clean, balanced look */
+  font-weight: 600; /* Lighter boldness for a more modern feel */
+  text-transform: uppercase; /* Adds a sense of professionalism */
+  letter-spacing: 2px; /* Spacing between letters for a sleek effect */
+  line-height: 1.4; /* Improved line height for better readability */
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+   /* Card styles */
+   .artist-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.artist-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.artist-card img:hover {
+    transform: scale(1.1);
+}
+  .title{
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(42, 36, 36);
+  }
+  .title1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.button-view {
+  font-size: 1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background-color: #1db954; /* Spotify green */
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; /* Ensures link text is not underlined */
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow for pop-out effect */
+}
+
+.button-view:hover {
+  background-color: #1ed760; /* Lighter Spotify green on hover */
+  transform: scale(1.1); /* Enlarges the button slightly */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.button-view:active {
+  transform: scale(1); /* Resets the scale when the button is clicked */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Normal shadow on click */
+}
+.row .col-lg-4 {
+  margin-bottom: 2rem;
+}
+ /* Heading styles */
+ .section-heading {
+  text-align: center;
+  margin: 4rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  text-transform: uppercase;
+}
+
+  .footer{
+    width: 100%;
+    color: #2e2424;
+  }
+  .foot-text{
+    color: #fff;
+  
+  }
+  .footer_text{
+   color: white;
+  }
+  #foot-text{
+    color: #fff;
+  }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+          .hero {
+              padding: 2rem 1rem;
+          }
+
+          .section-heading {
+              font-size: 2rem;
+          }
+
+          .artist-card img {
+              height: 200px;
+          }
+      }
